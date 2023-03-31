@@ -14,8 +14,7 @@ Let's say you have an application that needs to process large amounts of data, s
 
 Here is an example implementation of this use case using isolates in Flutter:</p>
 
-`
-import 'dart:async';
+`import 'dart:async';
 import 'dart:isolate';
 
 Future<void> processImages(List<String> imagePaths) async {
@@ -38,9 +37,8 @@ void _processImagesIsolate(SendPort sendPort) async {
   //   // process the image
   // }
   sendPort.send('done');
-}
+}`
 
-`
 <p>
 In this example, the processImages function takes a list of image paths and creates a new isolate using the Isolate.spawn method, passing in the _processImagesIsolate function as the entry point for the new isolate. The _processImagesIsolate function runs on the new isolate and performs the image processing.
 
